@@ -13,7 +13,7 @@ source:
   sha256: 337828b3d8527788338bafd0dd35c6c4f57f18a83aba879a820fb0775d622560
 
 build:
-  number: 0
+  number: 1
   noarch: python
   python:
     entry_points:
@@ -27,6 +27,7 @@ requirements:
   run:
     - python >=${{ python_min }}
     - pyside6 >=6.7
+    - qt6-multimedia
     - typer >=0.12
     - loguru >=0.7
     - ffmpeg
@@ -36,6 +37,8 @@ tests:
   - python:
       imports:
         - croppy
+        - PySide6.QtMultimedia
+        - PySide6.QtMultimediaWidgets
       python_version: ${{ python_min }}.*
   - script:
       - croppy --version
