@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.6.0"
+  version: "0.6.1"
   python_min: "3.12"
 
 package:
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://github.com/roaldarbol/croppy/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 337828b3d8527788338bafd0dd35c6c4f57f18a83aba879a820fb0775d622560
+  sha256: 9c7a95508de836c2959dab569372b53c439e9681661606151f1168062b850bc8
 
 build:
-  number: 1
+  number: 0
   noarch: python
   python:
     entry_points:
